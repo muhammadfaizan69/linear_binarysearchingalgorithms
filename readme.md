@@ -58,73 +58,13 @@ Important Note: Binary Search only works on sorted data. If the list is unsorted
 Worst-Case Scenario for Binary Search (Unsorted List)
 If Binary Search is applied to an unsorted list, it will fail to work correctly, and its time complexity will degrade to O(n), similar to that of Linear Search. This illustrates the importance of ensuring that the list is sorted before applying Binary Search.
 
-Code Example
-python
-Copy
-# Linear Search Implementation
-def linear_search(arr, target):
-    """
-    This function performs a linear search on the array to find the target element.
-    
-    :param arr: List of elements
-    :param target: Element to search for
-    :return: Index of the target element if found, -1 if not found
-    """
-    for i in range(len(arr)):
-        if arr[i] == target:
-            return i
-    return -1
-
-
-# Binary Search Implementation
-def binary_search(arr, target):
-    """
-    This function performs binary search on a sorted array to find the target element.
-    
-    :param arr: Sorted list of elements
-    :param target: Element to search for
-    :return: Index of the target element if found, -1 if not found
-    """
-    low = 0
-    high = len(arr) - 1
-    while low <= high:
-        mid = (low + high) // 2
-        if arr[mid] == target:
-            return mid
-        elif arr[mid] < target:
-            low = mid + 1
-        else:
-            high = mid - 1
-    return -1
-
-
-# Main Program Execution
-if __name__ == "__main__":
-    # Sample Data
-    data = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
-    target = 40
-    
-    # Linear Search Test
-    linear_result = linear_search(data, target)
-    if linear_result != -1:
-        print(f"Linear Search: Target {target} found at index {linear_result}.")
-    else:
-        print(f"Linear Search: Target {target} not found.")
-    
-    # Binary Search Test
-    binary_result = binary_search(data, target)
-    if binary_result != -1:
-        print(f"Binary Search: Target {target} found at index {binary_result}.")
-    else:
-        print(f"Binary Search: Target {target} not found.")
-
   ## Worst Case of Binary Search (Unsorted List)
   If Binary Search is applied to an unsorted list, it will not function as expected and may degrade to O(n) time complexity, much like Linear Search. For an unsorted list, the algorithm will need to examine each element before concluding that the target element does not exist.
 
 Code Example
 python
 Copy
-# Linear Search Implementation
+## Linear Search Implementation
 def linear_search(arr, target):
     """
     This function performs a linear search on the array to find the target element.
@@ -139,7 +79,7 @@ def linear_search(arr, target):
     return -1
 
 
-# Binary Search Implementation
+## Binary Search Implementation
 def binary_search(arr, target):
     """
     This function performs binary search on a sorted array to find the target element.
@@ -161,7 +101,7 @@ def binary_search(arr, target):
     return -1
 
 
-# Main Program Execution
+## Main Program Execution
 if __name__ == "__main__":
     # Sample Data
     data = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
