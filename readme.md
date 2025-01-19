@@ -123,16 +123,6 @@ GitHub:https://github.com/muhammadfaizan69
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-This README file provides a clear and structured explanation of your project, including how to run the code, the purpose behind the algorithms, time complexities, and the learning outcomes. It ensures that others can easily understand and utilize your project.
-
-
-
-Get smarter responses, upload files and images, and more.
-
-Log in
-
-Sign up
-
 
 
 
