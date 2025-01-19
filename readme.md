@@ -6,6 +6,16 @@ Linear Search
 Binary Search
 The purpose of this project is to implement these classic algorithms, analyze their time complexities, and practice writing clean, efficient, and well-documented code. These algorithms are essential in understanding how to search through datasets efficiently, making this project an excellent way to solidify core concepts in computer science.
 
+## Purpose of the Code
+The goal of this project is to:
+
+Implement Linear Search and Binary Search algorithms.
+Understand the time complexity of these search algorithms and their applications in real-world scenarios.
+Analyze the efficiency of each search method for different sizes of input data.
+Linear Search: This algorithm checks each element in the list one by one until the target is found or the end of the list is reached.
+Binary Search: This algorithm works only on sorted data and divides the list into two halves repeatedly to narrow down the search area, making it faster than Linear Search for large datasets.
+
+
 ## How to Run the Program
 Prerequisites
 Make sure you have Python installed on your system. You can download Python from here.
@@ -107,7 +117,71 @@ if __name__ == "__main__":
         print(f"Binary Search: Target {target} found at index {binary_result}.")
     else:
         print(f"Binary Search: Target {target} not found.")
-Learning Outcomes
+
+  ## Worst Case of Binary Search (Unsorted List)
+  If Binary Search is applied to an unsorted list, it will not function as expected and may degrade to O(n) time complexity, much like Linear Search. For an unsorted list, the algorithm will need to examine each element before concluding that the target element does not exist.
+
+Code Example
+python
+Copy
+# Linear Search Implementation
+def linear_search(arr, target):
+    """
+    This function performs a linear search on the array to find the target element.
+    
+    :param arr: List of elements
+    :param target: Element to search for
+    :return: Index of the target element if found, -1 if not found
+    """
+    for i in range(len(arr)):
+        if arr[i] == target:
+            return i
+    return -1
+
+
+# Binary Search Implementation
+def binary_search(arr, target):
+    """
+    This function performs binary search on a sorted array to find the target element.
+    
+    :param arr: Sorted list of elements
+    :param target: Element to search for
+    :return: Index of the target element if found, -1 if not found
+    """
+    low = 0
+    high = len(arr) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1
+
+
+# Main Program Execution
+if __name__ == "__main__":
+    # Sample Data
+    data = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+    target = 40
+    
+    # Linear Search Test
+    linear_result = linear_search(data, target)
+    if linear_result != -1:
+        print(f"Linear Search: Target {target} found at index {linear_result}.")
+    else:
+        print(f"Linear Search: Target {target} not found.")
+    
+    # Binary Search Test
+    binary_result = binary_search(data, target)
+    if binary_result != -1:
+        print(f"Binary Search: Target {target} found at index {binary_result}.")
+    else:
+        print(f"Binary Search: Target {target} not found.")
+    
+## Learning Outcomes
 Algorithm Implementation: Successfully implemented both Linear Search and Binary Search in Python.
 Time Complexity Analysis: Gained a deeper understanding of the O(n) and O(log n) time complexities.
 Code Optimization: Focused on writing efficient and well-documented code that is easy to understand and maintain.
