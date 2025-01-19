@@ -1,12 +1,12 @@
-Search Algorithms: Binary Search and Linear Search
-Project Overview
+# Search Algorithms: Binary Search and Linear Search
+## Project Overview
 This project demonstrates the implementation of two fundamental search algorithms:
 
 Linear Search
 Binary Search
 The purpose of this project is to implement these classic algorithms, analyze their time complexities, and practice writing clean, efficient, and well-documented code. These algorithms are essential in understanding how to search through datasets efficiently, making this project an excellent way to solidify core concepts in computer science.
 
-How to Run the Program
+## How to Run the Program
 Prerequisites
 Make sure you have Python installed on your system. You can download Python from here.
 
@@ -31,17 +31,17 @@ Program Execution: The program runs a test with a predefined list and target val
 Purpose of the Code
 The goal of this project is to:
 
-Implement Linear Search: A straightforward search algorithm that checks each element in the list until the target is found.
-Implement Binary Search: A more efficient search algorithm for sorted lists that works by repeatedly dividing the list into halves.
+## Implement Linear Search: A straightforward search algorithm that checks each element in the list until the target is found.
+## Implement Binary Search: A more efficient search algorithm for sorted lists that works by repeatedly dividing the list into halves.
 Through this project, I have gained a deeper understanding of:
 
 The importance of algorithmic efficiency in real-world applications.
 How to implement search algorithms and test them with different datasets.
-Time Complexity
-Linear Search: O(n)
+## Time Complexity
+### Linear Search: O(n)
 Linear Search checks each element of the list sequentially until the target is found or the list is exhausted.
 In the worst case, where the target element is at the last position or doesn't exist, Linear Search needs to check all n elements, making its time complexity O(n).
-Binary Search: O(log n)
+### Binary Search: O(log n)
 Binary Search works by repeatedly dividing the search space in half, significantly reducing the number of comparisons required.
 For a list of n elements, Binary Search narrows down the search space in logarithmic time, resulting in a time complexity of O(log n).
 Important Note: Binary Search only works on sorted data. If the list is unsorted, it will either return incorrect results or require sorting beforehand.
